@@ -6,6 +6,7 @@
     "forwardPorts": [
         8000
     ],
+    "workspaceFolder": "/workspaces/AI_Ready/",
     "postCreateCommand": "./postcreate.sh",
     "containerUser": "aiready",
     "init": true,
