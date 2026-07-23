@@ -7,7 +7,7 @@
         8000
     ],
     "postCreateCommand": "./postcreate.sh",
-    "containerUser": "aiforthai",
+    "containerUser": "aiready",
     "init": true,
     "updateRemoteUserUID": true,
     "customizations": {
@@ -106,7 +106,7 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "installZsh": "true",
-            "username": "aiforthai",
+            "username": "aiready",
             "userUid": "${localEnv:USER_UID}",
             "userGid": "${localEnv:USER_GID}",
             "upgradePackages": "false",

@@ -2,14 +2,14 @@
 FROM python:3.14-alpine
 
 # set work directory
-WORKDIR /app
+WORKDIR /workspaces
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     UV_LINK_MODE=copy \
     UV_PYTHON_DOWNLOADS=never \
-    UV_PROJECT_ENVIRONMENT=/app/.venv
+    UV_PROJECT_ENVIRONMENT=/workspaces/.venv
 
 # install system dependencies
 # RUN apt-get update && apt-get install -y --no-install-recommends netcat-traditional
@@ -39,4 +39,4 @@ RUN --mount=type=cache,target=/root/.cache \
 COPY . .
 
 # run entrypoint.sh
-ENTRYPOINT ["/app/entrypoint.sh"]
+# ENTRYPOINT ["/workspaces/entrypoint.sh"]
