@@ -170,3 +170,5 @@ static/*
 
 # VS Code
 .vscode/
+
+staticfiles/
