@@ -7,7 +7,7 @@
         8000
     ],
     "workspaceFolder": "/workspaces/",
-    "postCreateCommand": "./postcreate.sh",
+    "postCreateCommand": "/workspaces/AI_Ready/postcreate.sh",
     "containerUser": "aiready",
     "init": true,
     "updateRemoteUserUID": true,
