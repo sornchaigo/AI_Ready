@@ -6,7 +6,7 @@
     "forwardPorts": [
         8000
     ],
-    "workspaceFolder": "/workspaces/AI_Ready/",
+    "workspaceFolder": "/workspaces/",
     "postCreateCommand": "./postcreate.sh",
     "containerUser": "aiready",
     "init": true,
@@ -31,7 +31,6 @@
                 "remote.localPortHost": "allInterfaces",
                 "terminal.integrated.cursorBlinking": true,
                 "terminal.integrated.defaultProfile.linux": "zsh",
-                "vsintellicode.features.python.deepLearning": "enabled",
                 "workbench.colorCustomizations": {
                     "editorUnnecessaryCode.border": "#fbbd52",
                     "editorUnnecessaryCode.opacity": "#ffffff8b",
@@ -55,9 +54,9 @@
                 "isort.check": true,
                 "indentRainbow.lightIndicatorStyleLineWidth": 2,
                 "python.languageServer": "Pylance",
-                "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-                "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
-                "python.envFile": "${workspaceFolder}/.venv",
+                "python.defaultInterpreterPath": "/workspaces/.venv/bin/python",
+                "python.pythonPath": "/workspaces/.venv/bin/python",
+                "python.envFile": "/workspaces/.venv",
                 "python.analysis.typeCheckingMode": "off",
                 "ruff.format.preview": true,
                 "ruff.lineLength": 100,
@@ -99,8 +98,7 @@
                 "ms-python.vscode-pylance",
                 "njpwerner.autodocstring",
                 "oderwat.indent-rainbow",
-                "twixes.pypi-assistant",
-                "VisualStudioExptTeam.vscodeintellicode"
+                "twixes.pypi-assistant"
             ]
         }
     },

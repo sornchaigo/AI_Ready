@@ -31,7 +31,6 @@
         {% for question in pillar.questions.all %}
         <div>
           <h2>{{question}}</h2>
-          {{question.choices.all}}
           <div class="row">
             {% for choice in question.choices.all %}
             <div class="col">

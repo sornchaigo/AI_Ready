@@ -41,9 +41,9 @@ COPY . .
 # run entrypoint.sh
 # ENTRYPOINT ["/workspaces/entrypoint.sh"]
 
-RUN uv venv --clear
-RUN uv sync
+# RUN uv venv --clear
+# RUN uv sync
 RUN source /workspaces/.venv/bin/activate
 
-RUN uv run manage.py collectstatic
+# RUN uv run manage.py collectstatic
 RUN uv run manage.py migrate --no-input
