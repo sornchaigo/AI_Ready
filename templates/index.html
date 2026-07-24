@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Ready</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+      {% for pillar in pillar_list%}
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pillar-{{pillar.name}}-tab" data-bs-toggle="pill"
+          data-bs-target="#pillar-{{pillar.name}}" type="button" role="tab" aria-controls="pillar-{{pillar.name}}"
+          aria-selected="true">{{pillar.name}}</button>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      {% for pillar in pillar_list %}
+      <div class="tab-pane fade" id="pillar-{{pillar.name}}" role="tabpanel"
+        aria-labelledby="pillar-{{pillar.name}}-tab">
+        {% for question in pillar.questions.all %}
+        <div>
+          <h2>{{question}}</h2>
+          {{question.choices.all}}
+          <div class="row">
+            {% for choice in question.choices.all %}
+            <div class="col">
+              <input type="radio" value="{{choice.score}}" name="question_{{question.id}}">
+              {{choice}}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</body>
+
+</html>
